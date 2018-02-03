@@ -48,7 +48,19 @@ h2
     color: #d82c2e;
     height: 25px;
 }
-
+#contact-form input[type=submit]
+{
+    margin: 40px 
+}
+.button1
+{
+    border: 1px solid #ddd;
+    background: #ffa500;
+    color: #fff;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
 
 
