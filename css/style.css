@@ -64,7 +64,18 @@ h2
     border-radius: 5px;
     transition: all 0.3s ease-in 0s;
 }
-
+.buton1:hover
+{
+    background: #333;
+    border-color: #ffa500;
+}
+.thank-you
+{
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 22px;
+}
 
 
 
