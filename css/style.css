@@ -1,3 +1,15 @@
-body{
-    
+body
+{
+    font-family: "lato" , sans-serif;
+    margin: 700px 0px;
+    background: #0069d6;
 }
+/*.divider
+
+{
+    width: 100px;
+    height: 2px;
+    background: #ffa500;
+    margin: 0 auto;
+}
+*/
