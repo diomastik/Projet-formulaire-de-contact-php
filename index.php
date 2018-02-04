@@ -43,31 +43,31 @@
                         
                        <div class="col-md-6">
                            <label for="firstname">Prénom<span class="blue"> *</span></label>
-                           <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Votre prénom" value="<?php echo $firstname ?>">
+                           <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Votre prénom" value="<?php echo $firstname; ?>">
                            <p class="comments">Message d'erreur</p>
                         </div>
                         
                         <div class="col-md-6">
                             <label for="name">Nom<span class="blue"> *</span></label>
-                         <input type="text" id="name"  name="name" class="form-control" placeholder="Votre Nom">
+                         <input type="text" id="name"  name="name" class="form-control" placeholder="Votre Nom" value="<?php echo $name; ?>">>
                            <p class="comments">Message d'erreur</p>
                         </div>
                         
                          <div class="col-md-6">
                             <label for="email">Email<span class="blue"> *</span></label>
-                         <input type="text" id="email"  name="email" class="form-control" placeholder="Votre Email">
+                         <input type="text" id="email"  name="email" class="form-control" placeholder="Votre Email" value="<?php echo $email; ?>">>
                            <p class="comments">Message d'erreur</p>
                         </div>
                         
                          <div class="col-md-6">
                             <label for="phone">Téléphone</label>
-                         <input type="text" id="phone"  name="phone" class="form-control" placeholder="Votre Téléphone">
+                         <input type="text" id="phone"  name="phone" class="form-control" placeholder="Votre Téléphone" value="<?php echo $phone; ?>">
                            <p class="comments">Message d'erreur</p>
                         </div>
                         
                          <div class="col-md-12">
-                            <label for="message">Nom<span class="blue">*</span></label>
-                            <textarea id="message" name="message" class="form-control" placeholder="Votre Méssage" rows="4"></textarea>
+                            <label for="message">Message<span class="blue">*</span></label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Votre Méssage" rows="4"><?php echo $message; ?></textarea>
                            <p class="comments">Message d'erreur</p>
                         </div>
                         
