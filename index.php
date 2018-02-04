@@ -99,7 +99,7 @@
                          <div class="col-md-6">
                             <label for="phone">Téléphone</label>
                          <input type="tel" id="phone"  name="phone" class="form-control" placeholder="Votre Téléphone" value="<?php echo $phone; ?>">
-                           <p class="comments"></p>
+                           <p class="comments"><?php echo $phoneError; ?></p>
                         </div>
                         
                          <div class="col-md-12">
