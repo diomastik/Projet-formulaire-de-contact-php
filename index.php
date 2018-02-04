@@ -25,8 +25,19 @@
         {
             $messageError = "Vous devez dire quelques choses.";
         }
+        if(!isEmail($email))
+        {
+            $emailError = "Veuillez entrez un email valide svp?merci"
+        }
         
-    
+        
+        
+    }
+
+    function isEmail($var)
+    {
+        
+        return filter_var($var, FILTER_VALIDATE_EMAIL);
         
     }
   function verifyInput($var)
