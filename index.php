@@ -13,16 +13,20 @@
         
         if(empty($firstname))
         {
-            $firstnameError = "Vous devez entrez votre prénom!";
+            $firstnameError = "Vous devez entrez votre prénom.";
         }
         
         if(empty($name))
         {
-            $nameError = "Vous devez entrez votre nom!";
+            $nameError = "Vous devez entrez votre nom.";
         }
         
+        if(empty($message))
+        {
+            $messageError = "Vous devez dire quelques choses.";
+        }
         
-        
+    
         
     }
   function verifyInput($var)
@@ -71,26 +75,26 @@
                         
                         <div class="col-md-6">
                             <label for="name">Nom<span class="blue"> *</span></label>
-                         <input type="text" id="name"  name="name" class="form-control" placeholder="Votre Nom" value="<?php echo $name; ?>">>
+                         <input type="name" id="name"  name="name" class="form-control" placeholder="Votre Nom" value="<?php echo $name; ?>">
                            <p class="comments"><?php echo $nameError; ?></p>
                         </div>
                         
                          <div class="col-md-6">
                             <label for="email">Email<span class="blue"> *</span></label>
-                         <input type="email" id="email"  name="email" class="form-control" placeholder="Votre Email" value="<?php echo $email; ?>">>
-                           <p class="comments">Message d'erreur</p>
+                         <input type="email" id="email"  name="email" class="form-control" placeholder="Votre Email" value="<?php echo $email; ?>">
+                           <p class="comments"><?php echo $emailError; ?></p>
                         </div>
                         
                          <div class="col-md-6">
                             <label for="phone">Téléphone</label>
                          <input type="tel" id="phone"  name="phone" class="form-control" placeholder="Votre Téléphone" value="<?php echo $phone; ?>">
-                           <p class="comments">Message d'erreur</p>
+                           <p class="comments"></p>
                         </div>
                         
                          <div class="col-md-12">
                             <label for="message">Message<span class="blue">*</span></label>
                             <textarea id="message" name="message" class="form-control" placeholder="Votre Méssage" rows="4"><?php echo $message; ?></textarea>
-                           <p class="comments">Message d'erreur</p>
+                           <p class="comments"><?php echo $messageError; ?></p>
                         </div>
                         
                         <div class="col-md-12">
