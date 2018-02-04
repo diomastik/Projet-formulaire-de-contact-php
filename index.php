@@ -1,3 +1,18 @@
+<?php 
+
+    $firstname = $name = $phone = $message = "";
+    
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $firstname = $_POST["firstname"];
+        $name = $_POST["name"];
+        $ename = $_POST["ename"];
+        $phone = $_POST["phone"];
+        $message = $_POST["message"];
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
    <head>
