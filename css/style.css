@@ -1,8 +1,11 @@
+
+
 body
 {
-    font-family: "lato" , sans-serif;
-    margin:700px 0px;
-    background: #0069d6;
+     font-family: "Lato", sans-serif;
+     margin: 70px 0px;
+     background: #0069d6;
+     
 }
 .divider
 
@@ -12,6 +15,7 @@ body
     background: #ffa500;
     margin: 0 auto;
 }
+
 .heading
 {
     text-align: center;
@@ -64,7 +68,7 @@ h2
     border-radius: 5px;
     transition: all 0.3s ease-in 0s;
 }
-.buton1:hover
+.button1:hover
 {
     background: #333;
     border-color: #ffa500;
@@ -76,34 +80,5 @@ h2
     font-weight: bold;
     font-size: 22px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
