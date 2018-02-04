@@ -1,6 +1,7 @@
 <?php 
 
-    $firstname = $name = $phone = $message = "";
+    $firstname = $name = $email = $phone = $message = "";
+    $firstnameError = $nameError = $emailError = $phoneError = $messageError = "";
     
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
@@ -9,6 +10,20 @@
         $email = $_POST["email"];
         $phone = $_POST["phone"];
         $message = $_POST["message"];
+        
+        if(empty($firstname))
+        {
+            $firstnameError = "Vous devez entrez votre prénom!";
+        }
+        
+        if(empty($name))
+        {
+            $nameError = "Vous devez entrez votre nom!";
+        }
+        
+        
+        
+        
     }
   function verifyInput($var)
   {
@@ -50,7 +65,7 @@
                         
                        <div class="col-md-6">
                            <label for="firstname">Prénom<span class="blue"> *</span></label>
-                           <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Votre prénom" value="<?php echo $firstname; ?>">
+                    <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Votre prénom" value="<?php echo $firstname; ?>">
                            <p class="comments">Message d'erreur</p>
                         </div>
                         
