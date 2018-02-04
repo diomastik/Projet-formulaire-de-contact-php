@@ -62,13 +62,13 @@
                         
                          <div class="col-md-6">
                             <label for="email">Email<span class="blue"> *</span></label>
-                         <input type="text" id="email"  name="email" class="form-control" placeholder="Votre Email" value="<?php echo $email; ?>">>
+                         <input type="email" id="email"  name="email" class="form-control" placeholder="Votre Email" value="<?php echo $email; ?>">>
                            <p class="comments">Message d'erreur</p>
                         </div>
                         
                          <div class="col-md-6">
                             <label for="phone">Téléphone</label>
-                         <input type="text" id="phone"  name="phone" class="form-control" placeholder="Votre Téléphone" value="<?php echo $phone; ?>">
+                         <input type="tel" id="phone"  name="phone" class="form-control" placeholder="Votre Téléphone" value="<?php echo $phone; ?>">
                            <p class="comments">Message d'erreur</p>
                         </div>
                         
