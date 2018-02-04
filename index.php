@@ -61,7 +61,7 @@
                         
                          <div class="col-md-6">
                             <label for="phone">Téléphone</label>
-                         <input type="text" id="name"  name="name" class="form-control" placeholder="Votre Téléphone">
+                         <input type="text" id="phone"  name="phone" class="form-control" placeholder="Votre Téléphone">
                            <p class="comments">Message d'erreur</p>
                         </div>
                         
