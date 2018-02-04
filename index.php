@@ -43,7 +43,7 @@
                         
                        <div class="col-md-6">
                            <label for="firstname">Prénom<span class="blue"> *</span></label>
-                           <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Votre prénom">
+                           <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Votre prénom" value="<?php echo $firstname ?>">
                            <p class="comments">Message d'erreur</p>
                         </div>
                         
