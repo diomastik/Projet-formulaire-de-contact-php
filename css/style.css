@@ -14,6 +14,7 @@ body
     height: 2px;
     background: #ffa500;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .heading
@@ -61,7 +62,7 @@ h2
     border: 1px solid #ddd;
     background: #ffa500;
     color: #fff;
-    width: 100%;
+/*    width: 100%;*/
     font-weight: bold;
     text-transform: uppercase;
     padding: 18px;
