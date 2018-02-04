@@ -66,13 +66,13 @@
                        <div class="col-md-6">
                            <label for="firstname">Prénom<span class="blue"> *</span></label>
                     <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Votre prénom" value="<?php echo $firstname; ?>">
-                           <p class="comments">Message d'erreur</p>
+                           <p class="comments"><?php echo $firstnameError; ?></p>
                         </div>
                         
                         <div class="col-md-6">
                             <label for="name">Nom<span class="blue"> *</span></label>
                          <input type="text" id="name"  name="name" class="form-control" placeholder="Votre Nom" value="<?php echo $name; ?>">>
-                           <p class="comments">Message d'erreur</p>
+                           <p class="comments"><?php echo $nameError; ?></p>
                         </div>
                         
                          <div class="col-md-6">
