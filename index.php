@@ -27,12 +27,22 @@
         }
         if(!isEmail($email))
         {
-            $emailError = "Veuillez entrez un email valide svp?merci";
+            $emailError = "Veuillez entrez un email valide svp.merci";
+        }
+        if(!isPhone($phone))
+        {
+            $phoneError = "Vou devez entrez un numero de phone valide";
         }
         
         
+    }
+    function isPhone($var)
+    {
+       return preg_match("/^[0-9 ]*$/, $var") 
         
     }
+
+
 
     function isEmail($var)
     {
@@ -92,7 +102,7 @@
                         
                          <div class="col-md-6">
                             <label for="email">Email<span class="blue"> *</span></label>
-                         <input type="email" id="email"  name="email" class="form-control" placeholder="Votre Email" value="<?php echo $email; ?>">
+                         <input type="text" id="email"  name="email" class="form-control" placeholder="Votre Email" value="<?php echo $email; ?>">
                            <p class="comments"><?php echo $emailError; ?></p>
                         </div>
                         
