@@ -2,6 +2,7 @@
 
     $firstname = $name = $email = $phone = $message = "";
     $firstnameError = $nameError = $emailError = $phoneError = $messageError = "";
+    $isSuccess = false;
     
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
@@ -10,35 +11,41 @@
         $email = $_POST["email"];
         $phone = $_POST["phone"];
         $message = $_POST["message"];
+        $isSucces = true;
         
         if(empty($firstname))
         {
             $firstnameError = "Vous devez entrez votre prénom.";
+            $isSuccess = false;
         }
         
         if(empty($name))
         {
             $nameError = "Vous devez entrez votre nom.";
+            $isSuccess = false;
         }
         
         if(empty($message))
         {
             $messageError = "Vous devez dire quelques choses.";
+            $isSuccess = false;
         }
         if(!isEmail($email))
         {
             $emailError = "Veuillez entrez un email valide svp.merci";
+            $isSuccess = false;
         }
         if(!isPhone($phone))
         {
             $phoneError = "Vou devez entrez un numero de phone valide";
+            $isSuccess = false;
         }
         
         
     }
     function isPhone($var)
     {
-       return preg_match("/^[0-9 ]*$/, $var") 
+       return preg_match("/^[0-9 ]*$/", $var);
         
     }
 
@@ -128,7 +135,7 @@
                           
                        </div>
                        
-                        <p class="thank-you">Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>
+                        <p class="thank-you" style="display:<?php if($isSuccess) echo 'block'; else'none'; ?>">Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>
                    
                     </form>
                </div>
