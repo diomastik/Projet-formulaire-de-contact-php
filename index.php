@@ -27,7 +27,7 @@
         }
         if(!isEmail($email))
         {
-            $emailError = "Veuillez entrez un email valide svp?merci"
+            $emailError = "Veuillez entrez un email valide svp?merci";
         }
         
         
