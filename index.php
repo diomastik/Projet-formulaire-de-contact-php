@@ -3,6 +3,7 @@
     $firstname = $name = $email = $phone = $message = "";
     $firstnameError = $nameError = $emailError = $phoneError = $messageError = "";
     $isSuccess = false;
+    $emailTo = "djalloh2016@gamil.com";
     
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
@@ -11,34 +12,62 @@
         $email = $_POST["email"];
         $phone = $_POST["phone"];
         $message = $_POST["message"];
-        $isSucces = true;
+        $isSuccess = true;
+        $emailText = "";
         
         if(empty($firstname))
         {
             $firstnameError = "Vous devez entrez votre prénom.";
             $isSuccess = false;
         }
+        else
+        {
+         $emailText .= "firstname: $firstname\n";  
+        }
+            
         
         if(empty($name))
         {
             $nameError = "Vous devez entrez votre nom.";
             $isSuccess = false;
         }
+        else
+        {
+            $emailText .= "name: $name\n";
+        }
+            
+        
         
         if(empty($message))
         {
             $messageError = "Vous devez dire quelques choses.";
             $isSuccess = false;
         }
+        else
+        {
+            $emailText .= "email: $email\n";
+        }
         if(!isEmail($email))
         {
             $emailError = "Veuillez entrez un email valide svp.merci";
             $isSuccess = false;
         }
+        else
+        {
+           $emailText .= "phone: $phone\n"; 
+        }
         if(!isPhone($phone))
         {
             $phoneError = "Vou devez entrez un numero de phone valide";
             $isSuccess = false;
+        }
+        
+        if($isSuccess)
+            
+        {
+            $headers = "From: $firstname $name <$email>\r\nReplay-To: $email";
+            mail($emailTo, "un message de votre site", $emailText , $headers);
+            $firstname = $name = $email = $phone = $message = "";
         }
         
         
@@ -135,7 +164,7 @@
                           
                        </div>
                        
-                        <p class="thank-you" style="display:<?php if($isSuccess) echo 'block'; else'none'; ?>">Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>
+                        <p class="thank-you" style="display:<?php if($isSuccess) echo 'block'; else echo'none';?>">Votre message a bien été envoyé. Merci de m'avoir contacté :)</p>
                    
                     </form>
                </div>
